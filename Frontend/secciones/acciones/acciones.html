@@ -1,0 +1,71 @@
+<div class="tab"></div> 
+<i class='bx bx-menu'></i>
+<div class="acciones-container">
+    <div class="tab-header">
+        <button class="tab-button active" data-tab="agregar">Agregar</button>
+        <button class="tab-button" data-tab="editar">Editar</button>
+        <button class="tab-button" data-tab="eliminar">Eliminar</button>
+        <button class="tab-button" data-tab="buscar">Buscar</button>
+    </div>
+
+    <div class="tab-pane" id="agregar">
+        <p>
+            <input type="number" id="rut" placeholder="Rut">
+            <button type="button" onclick="buscarEstudiante()">Buscar</button>
+        </p>
+        <p><input type="text" id="nombre" placeholder="Nombre" readonly></p>
+        <p>
+            <input type="text" id="buscar_empresa" placeholder="Buscador de empresa">
+            <button type="button" id="buscarEmpresa" onclick="buscarEmpresa()">Buscar Empresa</button>
+        </p>
+        <div id="resultados-busqueda"></div>
+        </p>
+        <p><input type="text" id="nombre_empresa" placeholder="Nombre de la empresa"></p>
+        <p><input type="text" id="direccion_empresa" placeholder="Dirección de la empresa"></p>
+        <p><input type="text" id="comuna_empresa" placeholder="Comuna de la empresa"></p>
+        <p><input type="text" id="region_empresa" placeholder="Región de la empresa"></p>
+        <p><input type="text" id="pais_empresa" placeholder="País de la empresa"></p>
+        <p>
+            <input type="text" id="latitud" placeholder="Latitud">
+            <input type="text" id="longitud" placeholder="Longitud">
+        </p>
+        <p>
+            <select id="tipo_trabajo">
+                <option value="0">Práctica</option>
+                <option value="1">Común</option>
+            </select>
+        </p>
+        <p><input type="date" id="fecha_ingreso" placeholder="Fecha Ingreso (YYYY-MM-DD)" required></p>
+        <p><input type="date" id="fecha_salida" placeholder="Fecha Salida (opcional)"></p>
+        <button type="button" onclick="agregarLaboral()">Agregar</button>
+    </div>    
+
+    <div class="tab-pane" id="editar">
+        <p><input type="number" placeholder="Rut"></p>
+        <p><input type="text" placeholder="Nombre" readonly></p>
+        <p><input type="text" placeholder="Carrera" readonly></p>
+        <p>
+            <select>
+                <option>Activo</option>
+                <option>Inactivo</option>
+            </select>
+        </p>
+        <p><input type="text" placeholder="Nombre de la empresa"></p>
+        <p><input type="text" placeholder="Dirección de la empresa" readonly></p>
+        <p><button type="button">Editar</button></p>
+    </div>
+
+    <div class="tab-pane" id="eliminar">
+        <p><input type="number" placeholder="Rut"></p>
+        <p><button type="button">Eliminar</button></p>
+    </div>
+
+    <div class="tab-pane active" id="buscar">
+        <p><input type="text" placeholder="ID de la empresa"></p>
+        <p>
+            <label type="text" for="radio-slider">Radio del círculo (metros):</label>
+            <input type="range" id="radio-slider" min="0" max="500" value="150">
+        </p>
+        <p><button type="button">Buscar</button></p>
+    </div>
+</div>
